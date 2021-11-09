@@ -32,7 +32,7 @@ massiveMaker(user);
 
 function calculate(a, b){
 
-    if (arguments.length == 1 || arguments.length == 0){
+    if (arguments.length < 2){
         console.log('введите два параметра');
     } else{
         if ( typeof a == 'number' && typeof b == 'number'){
@@ -137,7 +137,7 @@ document.body.appendChild(form);
 input.setAttribute('type', 'text')
 form.appendChild(input);
 
-let something = prompt()
+let something = Number(prompt('Введите число!'));
 for(let i = 0; i < something; i++){
     let option = document.createElement('option');
     option.innerText = 'Категория ' + (i+1);
@@ -152,6 +152,6 @@ document.body.appendChild(ul);
 function appendChild(){
     let li = document.createElement('li');
     li.innerText = 'Hello!';
-    ul.appendChild(li)
+    ul.appendChild(li);
 }
 setInterval(appendChild, 1000);
